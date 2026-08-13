@@ -92,36 +92,13 @@ export default function SocialBanner() {
         </ScrollReveal>
 
         <ScrollReveal animation="fade-up" duration={0.6} delay={100}>
-          <div className="instagram-posts-grid">
+          <div className="instagram-spacious-grid">
             {instagramPosts.map((post, idx) => (
-              <a
+              <div
                 key={idx}
-                href={post.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="instagram-post-card"
-              >
-                <div className="instagram-post-img-wrap">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="instagram-post-img"
-                    loading="lazy"
-                  />
-                  <div className="instagram-badge">
-                    <Instagram size={14} />
-                    <span>{post.tag}</span>
-                  </div>
-                </div>
-                <div className="instagram-post-body">
-                  <span className="instagram-handle">@hagmarkersentreprenadab</span>
-                  <p className="instagram-post-title">{post.title}</p>
-                  <div className="instagram-post-link">
-                    <span>Visa på Instagram</span>
-                    <ArrowUpRight size={16} />
-                  </div>
-                </div>
-              </a>
+                className="instagram-spacious-card"
+                dangerouslySetInnerHTML={{ __html: post.embedHtml }}
+              />
             ))}
           </div>
         </ScrollReveal>
@@ -169,109 +146,53 @@ export default function SocialBanner() {
       </div>
 
       <style>{`
-        .instagram-posts-grid {
+        .instagram-spacious-grid {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 24px;
+          gap: 28px;
           justify-content: center;
-          align-items: stretch;
+          align-items: start;
           width: 100%;
           max-width: 1140px;
           margin: 0 auto;
           padding: 10px 0;
         }
 
-        .instagram-post-card {
+        .instagram-spacious-card {
+          width: 100%;
+          max-width: 350px;
+          min-width: 0;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
           background: #ffffff;
           border-radius: 16px;
-          overflow: hidden;
-          box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+          box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
           border: 1px solid rgba(15, 23, 42, 0.08);
-          display: flex;
-          flex-direction: column;
-          text-decoration: none;
-          text-align: left;
+          overflow: hidden;
           transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
         }
 
-        .instagram-post-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+        .instagram-spacious-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
         }
 
-        .instagram-post-img-wrap {
-          position: relative;
+        .instagram-spacious-card iframe,
+        .instagram-spacious-card blockquote {
+          display: block !important;
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100% !important;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+          border: none !important;
+          margin: 0 !important;
+        }
+
+        .instagram-spacious-card > div {
           width: 100%;
-          height: 230px;
-          overflow: hidden;
-          background: #f1f5f9;
-        }
-
-        .instagram-post-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.4s ease;
-        }
-
-        .instagram-post-card:hover .instagram-post-img {
-          transform: scale(1.05);
-        }
-
-        .instagram-badge {
-          position: absolute;
-          top: 12px;
-          right: 12px;
-          background: rgba(15, 23, 42, 0.75);
-          backdrop-filter: blur(8px);
-          color: #ffffff;
-          padding: 5px 12px;
-          border-radius: 20px;
-          font-size: 0.78rem;
-          font-weight: 600;
-          display: flex;
-          align-items: center;
-          gap: 6px;
-        }
-
-        .instagram-post-body {
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-        }
-
-        .instagram-handle {
-          font-size: 0.78rem;
-          font-weight: 700;
-          color: var(--color-primary);
-          text-transform: uppercase;
-          letter-spacing: 0.04em;
-          margin-bottom: 6px;
-          display: block;
-        }
-
-        .instagram-post-title {
-          font-size: 0.95rem;
-          font-weight: 600;
-          color: var(--color-text-dark);
-          line-height: 1.45;
-          margin: 0 0 16px 0;
-          flex: 1;
-        }
-
-        .instagram-post-link {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          color: var(--color-primary);
-          font-size: 0.88rem;
-          font-weight: 700;
-          transition: gap 0.2s ease;
-        }
-
-        .instagram-post-card:hover .instagram-post-link {
-          gap: 10px;
+          min-width: 0;
         }
 
         .social-banner-btn {
@@ -313,30 +234,17 @@ export default function SocialBanner() {
         }
 
         @media (max-width: 992px) {
-          .instagram-posts-grid {
+          .instagram-spacious-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 20px;
           }
         }
 
-        @media (max-width: 640px) {
-          .instagram-posts-grid {
-            grid-template-columns: 1fr;
-            gap: 16px;
-            max-width: 400px;
-          }
-        }
-
         @media (max-width: 680px) {
           .instagram-spacious-grid {
-            display: none;
-          }
-
-          .instagram-mobile-list {
-            display: grid;
-            gap: 12px;
-            width: min(100%, 420px);
-            margin: 0 auto;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 380px;
           }
         }
 
