@@ -37,7 +37,7 @@ export function usePageTitle(title: string, description?: string) {
     if (twitterDescription) twitterDescription.setAttribute('content', activeDesc);
 
     // 5. Update Canonical Link
-    const absoluteUrl = `https://mgamark.se${pathname === '/' ? '' : pathname}`;
+    const absoluteUrl = `https://hagmarkersentreprenad.se${pathname === '/' ? '' : pathname}`;
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
       canonical.setAttribute('href', absoluteUrl);
