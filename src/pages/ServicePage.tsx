@@ -207,7 +207,7 @@ export default function ServicePage() {
   }, [slug, normalizedSlug]);
 
   usePageTitle(
-    `${service.title} | MGA Markarbeten AB`,
+    `${service.title} | Hagmarkers Entreprenad AB`,
     service.heroText
   );
 

@@ -70,8 +70,8 @@ export interface SiteImages {
 
 const images: SiteImages = {
   logo: {
-    url: 'https://i.imgur.com/X4qER1V.png',
-    alt: 'MGA Markarbeten AB',
+    url: '/logo-transparent.png',
+    alt: 'Hagmarkers Entreprenad AB',
   },
 
   hero: {
@@ -97,16 +97,16 @@ const images: SiteImages = {
   },
 
   gallery: [
-    { url: '/gallery-external-1.webp', alt: 'MGA Markarbeten AB arbete pågår 1' },
-    { url: '/gallery-external-2.webp', alt: 'MGA Markarbeten AB arbete pågår 2' },
-    { url: '/gallery-external-4.webp', alt: 'MGA Markarbeten AB arbete pågår 4' },
-    { url: '/gallery-external-3.webp', alt: 'MGA Markarbeten AB arbete pågår 5' },
+    { url: '/gallery-external-1.webp', alt: 'Hagmarkers Entreprenad AB arbete pågår 1' },
+    { url: '/gallery-external-2.webp', alt: 'Hagmarkers Entreprenad AB arbete pågår 2' },
+    { url: '/gallery-external-4.webp', alt: 'Hagmarkers Entreprenad AB arbete pågår 4' },
+    { url: '/gallery-external-3.webp', alt: 'Hagmarkers Entreprenad AB arbete pågår 5' },
   ],
 
   cta: {
     banner: {
       url: '/hero-main.webp',
-      alt: 'MGA Markarbeten projekt',
+      alt: 'Hagmarkers Entreprenad projekt',
     },
     midSection: {
       url: '/hero-main.webp',
@@ -116,11 +116,11 @@ const images: SiteImages = {
 
   about: {
     hero: {
-      url: 'https://i.imgur.com/X4qER1V.png',
-      alt: 'MGA Markarbeten AB logotyp',
+      url: '/logo-transparent.png',
+      alt: 'Hagmarkers Entreprenad AB logotyp',
     },
     teamMember: {
-      url: 'https://i.imgur.com/X4qER1V.png',
+      url: '/logo-transparent.png',
       alt: 'Teammedlem',
     },
   },
@@ -137,22 +137,22 @@ const images: SiteImages = {
 
   portfolio: [
     {
-      image: { url: '/gallery-external-1.webp', alt: 'MGA Markarbeten AB projekt 1' },
+      image: { url: '/gallery-external-1.webp', alt: 'Hagmarkers Entreprenad AB projekt 1' },
       title: 'Projekt 1',
       category: '',
     },
     {
-      image: { url: '/gallery-external-2.webp', alt: 'MGA Markarbeten AB projekt 2' },
+      image: { url: '/gallery-external-2.webp', alt: 'Hagmarkers Entreprenad AB projekt 2' },
       title: 'Projekt 2',
       category: '',
     },
     {
-      image: { url: '/gallery-external-4.webp', alt: 'MGA Markarbeten AB projekt 4' },
+      image: { url: '/gallery-external-4.webp', alt: 'Hagmarkers Entreprenad AB projekt 4' },
       title: 'Projekt 4',
       category: '',
     },
     {
-      image: { url: '/gallery-external-3.webp', alt: 'MGA Markarbeten AB projekt 5' },
+      image: { url: '/gallery-external-3.webp', alt: 'Hagmarkers Entreprenad AB projekt 5' },
       title: 'Projekt 5',
       category: '',
     },

@@ -6,6 +6,7 @@ import {
   MapPin,
   Hammer,
   CheckCircle2,
+  ArrowRight,
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import Button from '../components/Button';
@@ -25,13 +26,12 @@ const container: React.CSSProperties = {
 
 export default function Home() {
   usePageTitle(
-    'MGA Markarbeten AB | Entreprenad & Markarbete – Habo',
-    'Vi på MGA Markarbeten AB utför alla typer av entreprenad-, mark-, betong-, pool- och anläggningsarbeten i Habo med omnejd. Kontakta oss för en kostnadsfri offert!'
+    'Hagmarkers Entreprenad AB | Entreprenad och Markarbete – Jönköping',
+    'Vi på Hagmarkers Entreprenad AB utför alla typer av entreprenad-, mark-, betong-, pool- och anläggningsarbeten i Jönköping med omnejd. Kontakta oss för en kostnadsfri offert!'
   );
 
   const heroBgRef = useRef<HTMLDivElement>(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
-  const foundationVideoRef = useRef<HTMLVideoElement>(null);
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
 
   useEffect(() => {
@@ -93,31 +93,7 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    const video = foundationVideoRef.current;
-    if (!video) return;
 
-    const attemptPlay = () => {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.playsInline = true;
-      video.play().catch(() => undefined);
-    };
-
-    const events = ['loadedmetadata', 'loadeddata', 'canplay', 'playing'];
-    events.forEach((event) => video.addEventListener(event, attemptPlay));
-    window.addEventListener('touchstart', attemptPlay, { passive: true });
-    window.addEventListener('click', attemptPlay, { passive: true });
-    window.addEventListener('scroll', attemptPlay, { passive: true });
-    attemptPlay();
-
-    return () => {
-      events.forEach((event) => video.removeEventListener(event, attemptPlay));
-      window.removeEventListener('touchstart', attemptPlay);
-      window.removeEventListener('click', attemptPlay);
-      window.removeEventListener('scroll', attemptPlay);
-    };
-  }, []);
 
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
@@ -152,7 +128,7 @@ export default function Home() {
                 el.playsInline = true;
               }
             }}
-            src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260810_094024_96fb5445-a779-46f4-8d2c-49541bf52de9.mp4"
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260812_231416_315184a1-35fa-411b-b0de-8487aec45acc.mp4"
             preload="auto"
             autoPlay
             loop
@@ -167,7 +143,7 @@ export default function Home() {
               objectPosition: 'center',
             }}
           >
-            <source src="/hero-video.mp4" type="video/mp4" />
+            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260812_231416_315184a1-35fa-411b-b0de-8487aec45acc.mp4" type="video/mp4" />
           </video>
         </div>
         {/* Dark overlay */}
@@ -192,33 +168,33 @@ export default function Home() {
             {/* Top Location Line */}
             <ScrollReveal animation="fade-down" delay={0} duration={0.6}>
               <span style={{
-                fontFamily: "'Outfit', 'Plus Jakarta Sans', sans-serif",
-                letterSpacing: '0.18em',
+                fontFamily: "'Outfit', sans-serif",
+                letterSpacing: '0.24em',
                 textTransform: 'uppercase',
-                fontSize: 'clamp(0.75rem, 1.4vw, 0.85rem)',
-                fontWeight: 600,
-                color: 'rgba(255, 255, 255, 0.85)',
+                fontSize: 'clamp(0.7rem, 1.2vw, 0.82rem)',
+                fontWeight: 700,
+                color: 'rgba(255, 255, 255, 0.92)',
                 display: 'block',
-                marginBottom: '16px',
+                marginBottom: '14px',
               }}>
-                HABO • JÖNKÖPING • MULLSJÖ • BANKERYD
+                JÖNKÖPING • HABO • MULLSJÖ • BANKERYD
               </span>
             </ScrollReveal>
 
-            {/* Huge Condensed Headline (H1) matching reference logo screenshot */}
+            {/* Huge Bold Headline (H1) using Outfit font */}
             <ScrollReveal animation="fade-up" delay={100} duration={0.8}>
               <h1 style={{
-                fontFamily: "'Bebas Neue', 'Oswald', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 color: '#ffffff',
-                fontSize: 'clamp(4.2rem, 10vw, 7.8rem)',
-                fontWeight: 400,
-                lineHeight: 0.88,
+                fontSize: 'clamp(3.2rem, 7.5vw, 5.8rem)',
+                fontWeight: 900,
+                lineHeight: 0.98,
                 textTransform: 'uppercase',
-                letterSpacing: '0.03em',
+                letterSpacing: '-0.01em',
                 margin: '0 0 24px 0',
-                textShadow: '0 4px 20px rgba(0, 0, 0, 0.85)',
+                textShadow: '0 4px 18px rgba(0, 0, 0, 0.75)',
               }}>
-                MGA<br />MARKARBETEN<br />AB
+                HAGMARKERS<br />ENTREPRENAD<br />AB
               </h1>
             </ScrollReveal>
 
@@ -234,7 +210,7 @@ export default function Home() {
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Din entreprenör i Habo — markarbeten, betong, dränering och maskinuthyrning med hantverk som syns i varje detalj.
+                Din entreprenör i Jönköping — vi utför allt inom markentreprenad, grundläggning, dränering, betong och tomtplanering med hantverk som syns i varje detalj.
               </p>
             </ScrollReveal>
 
@@ -253,7 +229,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  href="tel:0761778570"
+                  href="tel:0726441723"
                   onClick={(e) => {
                     if (window.innerWidth > 768) {
                       e.preventDefault();
@@ -263,7 +239,7 @@ export default function Home() {
                 >
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                     <Phone size={18} />
-                    Ring 076-177 85 70
+                    Ring 072-644 17 23
                   </span>
                 </Button>
               </div>
@@ -368,22 +344,9 @@ export default function Home() {
                 background: '#0f172a',
                 height: '380px',
               }}>
-                <video
-                  ref={foundationVideoRef}
-                  src="https://i.imgur.com/fTDcor7.mp4"
-                  preload="metadata"
-                  autoPlay
-                  muted
-                  onError={(event) => {
-                    const video = event.currentTarget;
-                    if (video.dataset.fallbackApplied) return;
-                    video.dataset.fallbackApplied = 'true';
-                    video.src = '/mga-about-video.mp4';
-                    video.load();
-                    video.play().catch(() => undefined);
-                  }}
-                  loop
-                  playsInline
+                <img
+                  src="/stabila-grunder.jpg"
+                  alt="Hagmarkers Entreprenad AB markentreprenad och stabila grunder"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -423,7 +386,7 @@ export default function Home() {
                   lineHeight: 1.75,
                   margin: '0 0 32px 0',
                 }}>
-                  Med rötter sedan 2011 erbjuder MGA Markarbeten AB engagemang, trygghet och helhetslösningar för din utemiljö. Vårt team på 6 anställda utför allt från stensättning, murar, dränering och tomtplanering till betong och grundläggning med Habo och Jönköping som utgångspunkt.
+                  Hagmarkers Entreprenad AB erbjuder kompletta helhetslösningar inom allt gällande markentreprenad. Vårt erfarna team utför allt från schaktning, dränering och grundläggning till stödmurar, betongarbeten och tomtplanering med Jönköping som utgångspunkt.
                 </p>
               </ScrollReveal>
               <ScrollReveal animation="fade-right" duration={0.8} delay={200}>
@@ -455,76 +418,183 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 5: CLEAN SPACED TILE GRID ────────────────────── */}
+      {/* ── SECTION 5: MODERN CLEAN PHOTO CARDS ────────────────────── */}
       <section
         id="tjanster"
         style={{
-          background: '#f4f3ef',
+          background: '#f8fafc',
           padding: 'clamp(80px, 10vw, 120px) 0',
+          borderTop: '1px solid #e2e8f0',
         }}
       >
         <div style={container}>
-          <div style={{ textAlign: 'center', marginBottom: '52px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <ScrollReveal animation="blur-in">
+              <span style={{
+                color: 'var(--color-primary)',
+                fontWeight: 700,
+                fontSize: '0.85rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                display: 'block',
+                marginBottom: '10px',
+              }}>
+                Våra kärntjänster
+              </span>
               <h2 style={{
                 color: 'var(--color-text-dark)',
                 fontWeight: 800,
                 fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)',
                 letterSpacing: '-0.02em',
-                margin: '0 0 14px 0',
+                margin: '0 0 16px 0',
               }}>
-                Vad vi kan hjälpa dig med
+                Helhetslösningar inom mark och entreprenad
               </h2>
             </ScrollReveal>
             <ScrollReveal animation="scale-x-center" delay={150} duration={0.6}>
-              <span style={{ display: 'block', width: '50px', height: '3px', background: 'var(--color-primary)', borderRadius: '2px', margin: '0 auto 16px auto' }} />
+              <span style={{ display: 'block', width: '50px', height: '3px', background: 'var(--color-primary)', borderRadius: '2px', margin: '0 auto 18px auto' }} />
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={200}>
               <p style={{
                 color: 'var(--color-gray-600)',
                 fontSize: '1.05rem',
-                maxWidth: '620px',
+                maxWidth: '640px',
                 margin: '0 auto',
                 lineHeight: 1.7,
               }}>
-                Helhetslösningar inom entreprenad, grundläggning och markarbeten för villor och fastigheter.
+                Från professionell stensättning och husdränering till trädfällning och altanbyggen i Jönköping med omnejd.
               </p>
             </ScrollReveal>
           </div>
 
-          {/* Spaced Tile Grid (Sentence case titles, warm off-white background) */}
-          <div className="spaced-screenshot-grid">
+          {/* Clean Modern Photo Grid */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
+            gap: '28px',
+          }}>
             {services.map((svc: ServiceItem, index: number) => (
-              <ScrollReveal key={svc.slug} animation="fade-up" delay={(index % 3) * 80}>
-                <Link to={svc.href} className="spaced-tile">
-                  {/* Image */}
-                  <img
-                    src={svc.image}
-                    alt={svc.title}
-                    loading="lazy"
-                    className="spaced-tile-img"
-                  />
-                  {/* Overlay */}
-                  <div className="spaced-tile-overlay" />
+              <ScrollReveal key={svc.slug} animation="fade-up" delay={index * 90}>
+                <Link
+                  to={svc.href}
+                  className="modern-photo-card"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    background: '#ffffff',
+                    borderRadius: '16px',
+                    overflow: 'hidden',
+                    textDecoration: 'none',
+                    border: '1px solid #e2e8f0',
+                    boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)',
+                    transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+                    height: '100%',
+                  }}
+                  onMouseEnter={(e) => {
+                    const card = e.currentTarget;
+                    card.style.transform = 'translateY(-6px)';
+                    card.style.boxShadow = '0 20px 40px rgba(15, 23, 42, 0.12)';
+                    card.style.borderColor = 'rgba(234, 88, 12, 0.3)';
+                    const img = card.querySelector('.card-photo') as HTMLElement;
+                    if (img) img.style.transform = 'scale(1.06)';
+                  }}
+                  onMouseLeave={(e) => {
+                    const card = e.currentTarget;
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 4px 20px rgba(15, 23, 42, 0.05)';
+                    card.style.borderColor = '#e2e8f0';
+                    const img = card.querySelector('.card-photo') as HTMLElement;
+                    if (img) img.style.transform = 'scale(1)';
+                  }}
+                >
+                  {/* Photo Container */}
+                  <div style={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '210px',
+                    overflow: 'hidden',
+                    background: '#0f172a',
+                  }}>
+                    <img
+                      src={svc.image}
+                      alt={svc.title}
+                      loading="lazy"
+                      className="card-photo"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        transition: 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+                      }}
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(180deg, transparent 50%, rgba(15, 23, 42, 0.4) 100%)',
+                      pointerEvents: 'none',
+                    }} />
+                  </div>
 
                   {/* Content Container */}
-                  <div className="spaced-tile-content">
-                    <div className="spaced-tile-left">
-                      <h3 className="spaced-tile-title">
-                        {svc.title}
-                      </h3>
-                    </div>
-                    <div className="spaced-tile-right" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                      <span style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.6)', fontWeight: 500, letterSpacing: '0.02em' }}>Läs mer</span>
-                      <span className="spaced-tile-action">Begär offert</span>
-                    </div>
+                  <div style={{
+                    padding: '24px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flex: 1,
+                  }}>
+                    <h3 style={{
+                      color: 'var(--color-text-dark)',
+                      fontWeight: 700,
+                      fontSize: '1.2rem',
+                      margin: '0 0 10px 0',
+                      letterSpacing: '-0.01em',
+                    }}>
+                      {svc.title}
+                    </h3>
+                    <p style={{
+                      color: 'var(--color-gray-600)',
+                      fontSize: '0.93rem',
+                      lineHeight: 1.65,
+                      margin: 0,
+                      flex: 1,
+                    }}>
+                      {svc.shortDescription}
+                    </p>
                   </div>
                 </Link>
               </ScrollReveal>
             ))}
           </div>
+
+          {/* Centered Button Underneath Grid */}
+          <div style={{ textAlign: 'center', marginTop: '48px' }}>
+            <ScrollReveal animation="fade-up" delay={200}>
+              <Button variant="primary" href="/tjanster" size="lg">
+                Läs mer om våra tjänster <ArrowRight size={18} />
+              </Button>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .services-accordion-grid {
+            grid-template-columns: 1fr !important;
+            gap: 36px !important;
+          }
+        }
+      `}</style>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .services-accordion-grid {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+          }
+        }
+      `}</style>
 
       {/* ── SECTION 6: MID CTA ──────────────────────────────────── */}
       <section style={{
@@ -631,8 +701,8 @@ export default function Home() {
             {[
               {
                 name: 'Johan Kvist',
-                location: 'Habo',
-                text: 'Anlitade MGA Markarbeten för mark- och grundarbetet inför vårt husbygge i Habo. Maskinföraren var otroligt skicklig och noggrann, och allt blev klart snabbare än förväntat. Kan varmt rekommenderas!',
+                location: 'Jönköping',
+                text: 'Anlitade Hagmarkers Entreprenad för mark- och grundarbetet inför vårt husbygge i Jönköping. Maskinföraren var otroligt skicklig och noggrann, och allt blev klart snabbare än förväntat. Kan varmt rekommenderas!',
                 stars: 5,
                 date: 'för 2 veckor sedan',
                 authorSub: 'Lokal guide • 8 omdömen',

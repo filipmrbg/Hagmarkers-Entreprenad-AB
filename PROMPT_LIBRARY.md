@@ -23,16 +23,17 @@ Scan the entire project and ensure that the correct company information is used 
 Remove any outdated or placeholder company details that may still exist in the template.
 
 Company Name:
-MGA Markarbeten AB
+Hagmarkers Entreprenad AB 
+
 
 
 Location / City:
-Habo                    
+Jönköping
 Phone Number:
-076-177 85 70
+0726441723
 
 Email:
-mattias@mgamark.se
+ollehagmarker@icloud.com
 
 ```
 
@@ -57,7 +58,7 @@ Important rules:
 4. The logo must also be used as the default preview image when the website is shared on social media platforms (OG image).
 
 Logo Image URL:
-https://i.imgur.com/X4qER1V.png
+https://i.imgur.com/y50GqQA.png
 ```
 
 ---
@@ -133,7 +134,7 @@ Only replace the background media source while keeping the existing structure of
 Ensure the image/video is responsive and scales properly across desktop, tablet, and mobile devices.
 
 Hero Background Image/Video URL:
-[ENTER IMAGE/VIDEO URL HERE]
+https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260812_231416_315184a1-35fa-411b-b0de-8487aec45acc.mp4
 ```
 
 ---

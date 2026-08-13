@@ -57,8 +57,8 @@ function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | 
 
 export default function Quote() {
   usePageTitle(
-    'Begär offert | MGA Markarbeten AB',
-    'Beskriv ditt projekt och begär en kostnadsfri offert för entreprenad- och markarbeten med Habo som utgångspunkt.'
+    'Begär offert | Hagmarkers Entreprenad AB',
+    'Beskriv ditt projekt och begär en kostnadsfri offert för entreprenad- och markarbeten med Jönköping som utgångspunkt.'
   );
   const [name, setName]       = useState('');
   const [email, setEmail]     = useState('');
@@ -195,8 +195,8 @@ export default function Quote() {
                     <option value="">Välj tjänst...</option>
                     <option value="anlaggning">Anläggning</option>
                     <option value="bygg">Bygg</option>
-                    <option value="dranering-va">Dränering & V/A</option>
-                    <option value="skog">Skog & Trädfällning</option>
+                    <option value="dranering-va">Dränering och VA</option>
+                    <option value="skog">Skog och Trädfällning</option>
                     <option value="annat">Annat projekt</option>
                   </select>
 

@@ -14,8 +14,8 @@ const container: React.CSSProperties = {
 
 export default function ServicesOverview() {
   usePageTitle(
-    'Våra Tjänster | MGA Markarbeten AB – Habo & Jönköping',
-    'Utforska våra 4 kärntjänster: Anläggning, Bygg, Dränering & V/A samt Skog & Trädfällning i Habo och Jönköping.'
+    'Våra Tjänster | Hagmarkers Entreprenad AB – Jönköping',
+    'Utforska våra kärntjänster: Anläggning, Bygg, Dränering och VA samt Skog och Trädfällning i Jönköping med omnejd.'
   );
 
   const { hash } = useLocation();
@@ -55,8 +55,8 @@ export default function ServicesOverview() {
         backgroundImage: 'url(/hero-services.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        paddingTop: '150px',
-        paddingBottom: '70px',
+        paddingTop: '130px',
+        paddingBottom: '36px',
         textAlign: 'center',
       }}>
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(15, 23, 42, 0.78)' }} />
@@ -84,7 +84,7 @@ export default function ServicesOverview() {
               margin: '20px auto 0',
               lineHeight: 1.65,
             }}>
-              Vi på MGA Markarbeten AB erbjuder kompletta lösningar för din fastighet i Habo och Jönköping.
+              Vi på Hagmarkers Entreprenad AB erbjuder kompletta lösningar för din fastighet i Jönköping med omnejd.
             </p>
           </ScrollReveal>
         </div>

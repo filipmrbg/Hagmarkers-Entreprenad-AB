@@ -38,14 +38,17 @@ const variantStyles: Record<Variant, CSSProperties> = {
 };
 
 const base: CSSProperties = {
-  borderRadius: 'var(--border-radius-pill)',
+  borderRadius: '12px',
   cursor: 'pointer',
   fontFamily: 'var(--font-family)',
   fontWeight: 600,
-  display: 'inline-block',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '8px',
   textDecoration: 'none',
   transition: 'all 0.3s ease',
-  lineHeight: 1,
+  lineHeight: 1.2,
 };
 
 function handleMouseEnter(e: React.MouseEvent<HTMLElement>, variant: Variant) {

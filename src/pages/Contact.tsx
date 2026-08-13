@@ -21,8 +21,8 @@ const faqItems = [
     answer: 'Vi brukar återkomma med en offert inom 1–3 arbetsdagar efter platsbesöket, beroende på projektets omfattning.',
   },
   {
-    question: 'Tar ni på er jobb utanför Habo?',
-    answer: 'Habo är vår utgångspunkt, men vi kan ta uppdrag i närliggande områden vid större projekt. Hör av dig så berättar vi mer.',
+    question: 'Tar ni på er jobb utanför Jönköping?',
+    answer: 'Jönköping är vår utgångspunkt, men vi kan ta uppdrag i närliggande områden vid större projekt. Hör av dig så berättar vi mer.',
   },
   {
     question: 'Kan jag boka ett platsbesök direkt?',
@@ -57,8 +57,8 @@ function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) 
 
 export default function Contact() {
   usePageTitle(
-    'Kontakta MGA Markarbeten AB | Offert & Rådgivning',
-    'Hör av dig till MGA Markarbeten AB för frågor, kostnadsfria platsbesök eller offert gällande ditt nästa entreprenad- och markprojekt med Habo som utgångspunkt.'
+    'Kontakta Hagmarkers Entreprenad AB | Offert och Rådgivning',
+    'Hör av dig till Hagmarkers Entreprenad AB för frågor, kostnadsfria platsbesök eller offert gällande ditt nästa entreprenad- och markprojekt med Jönköping som utgångspunkt.'
   );
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -146,12 +146,12 @@ export default function Contact() {
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <a
-                        href="tel:0761778570"
+                        href="tel:0726441723"
                         style={{ color: 'var(--color-gray-600)', fontSize: '0.95rem', textDecoration: 'none', lineHeight: 1.5, transition: 'color 0.2s ease' }}
                         onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
                         onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
                       >
-                        076-177 85 70
+                        072-644 17 23
                       </a>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ export default function Contact() {
                       Plats / Utgångspunkt
                     </p>
                     <p style={{ margin: 0, color: 'var(--color-gray-600)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-                      Habo som utgångspunkt
+                      Jönköping som utgångspunkt
                     </p>
                   </div>
                 </div>
@@ -198,12 +198,12 @@ export default function Contact() {
                       E-post
                     </p>
                     <a
-                      href="mailto:mattias@mgamark.se"
+                      href="mailto:ollehagmarker@icloud.com"
                       style={{ color: 'var(--color-gray-600)', fontSize: '0.95rem', textDecoration: 'none', lineHeight: 1.5, transition: 'color 0.2s ease' }}
                       onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
                       onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
                     >
-                      mattias@mgamark.se
+                      ollehagmarker@icloud.com
                     </a>
                   </div>
                 </div>

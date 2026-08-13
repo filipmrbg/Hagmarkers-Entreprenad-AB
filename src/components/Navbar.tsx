@@ -171,7 +171,7 @@ export default function Navbar() {
           }}
         >
           <img
-            src={images.logo.url}
+            src="/logo-white.png"
             alt={images.logo.alt}
             className={`nav-logo ${scrolled ? 'scrolled' : ''}`}
           />
@@ -328,7 +328,7 @@ export default function Navbar() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexShrink: 0 }}>
           <div className="phone-link-wrapper" style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '12px' }}>
             <a
-              href="tel:0761778570"
+              href="tel:0726441723"
               className="phone-link"
               style={{
                 display: 'flex',
@@ -346,7 +346,7 @@ export default function Navbar() {
               onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-white)')}
             >
               <Phone size={14} color="var(--color-primary)" />
-              <span>076-177 85 70</span>
+              <span>072-644 17 23</span>
             </a>
           </div>
 
@@ -387,7 +387,7 @@ export default function Navbar() {
           {/* Phone icon — shown on mobile only */}
           <div className="mobile-phone-btn" style={{ position: 'relative', display: 'none' }}>
             <a
-              href="tel:0761778570"
+              href="tel:0726441723"
               aria-label="Ring oss"
               style={{
                 display: 'flex',
@@ -540,8 +540,8 @@ export default function Navbar() {
             Ring oss direkt:
           </span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center' }}>
-            <a href="tel:0761778570" style={{ color: 'var(--color-white)', fontWeight: 600, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Phone size={14} color="var(--color-primary)" /> 076-177 85 70
+            <a href="tel:0726441723" style={{ color: 'var(--color-white)', fontWeight: 600, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Phone size={14} color="var(--color-primary)" /> 072-644 17 23
             </a>
           </div>
         </div>
@@ -557,19 +557,24 @@ export default function Navbar() {
           height: 15px;
         }
         .nav-logo {
-          height: 84px;
+          height: 88px;
           max-height: 14vh;
           width: auto;
-          border-radius: 10px;
           display: block;
           object-fit: contain;
-          background-color: #ffffff;
-          padding: 6px 14px;
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+          background-color: transparent;
+          padding: 0;
+          border-radius: 0;
+          box-shadow: none;
+          filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .nav-logo.scrolled {
-          height: 62px;
+          height: 68px;
+          background-color: transparent;
+          padding: 0;
+          border-radius: 0;
+          box-shadow: none;
         }
         @media (max-width: 1024px) {
           .phone-link { display: none !important; }
@@ -582,10 +587,12 @@ export default function Navbar() {
           nav.navbar-el.scrolled { padding: 10px 20px !important; }
           .mobile-phone-btn { display: flex !important; align-items: center; }
           .nav-logo {
-            height: 60px;
+            height: 62px;
+            padding: 0;
           }
           .nav-logo.scrolled {
-            height: 48px;
+            height: 50px;
+            padding: 0;
           }
         }
         @media (min-width: 769px) {

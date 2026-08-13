@@ -9,7 +9,7 @@ export function usePageTitle(title: string, description?: string) {
     document.title = title;
 
     // 2. Update Description
-    const defaultDesc = "MGA Markarbeten AB utför alla typer av entreprenad- och markarbeten med Habo som utgångspunkt. Kontakta oss för en kostnadsfri offert!";
+    const defaultDesc = "Hagmarkers Entreprenad AB utför alla typer av entreprenad- och markarbeten med Jönköping som utgångspunkt. Kontakta oss för en kostnadsfri offert!";
     const activeDesc = description || defaultDesc;
     
     let metaDescription = document.querySelector('meta[name="description"]');

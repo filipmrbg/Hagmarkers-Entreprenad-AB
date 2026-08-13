@@ -3,13 +3,14 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import images from '../data/images';
 
 const serviceLinks = [
-  { label: 'Markarbete & Schaktning', href: '/tjanster/markarbete' },
-  { label: 'Dränering & Fuktskydd', href: '/tjanster/dranering' },
-  { label: 'Betong & Grundläggning', href: '/tjanster/betong' },
+  { label: 'Markarbete och Schaktning', href: '/tjanster/markarbete' },
+  { label: 'Dränering och Fuktskydd', href: '/tjanster/dranering' },
+  { label: 'Betong och Grundläggning', href: '/tjanster/betong' },
 ];
 
 const socialIcons = [
-  { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/mgamarkarbeten/' },
+  { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/hagmarkersentreprenadab/' },
+  { Icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/hagmarkersentreprenadAB/photos?locale=sv_SE' },
 ];
 
 export default function Footer() {
@@ -39,16 +40,12 @@ export default function Footer() {
               <Link to="/" onClick={handleLogoClick} style={{ textDecoration: 'none', display: 'inline-block', cursor: 'pointer' }}>
                 <div style={{
                   display: 'inline-block',
-                  background: '#ffffff',
-                  padding: '8px 16px',
-                  borderRadius: '10px',
-                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)',
                 }}>
                   <img
                     src={images.logo.url}
                     alt={images.logo.alt}
                     style={{
-                      height: '48px',
+                      height: '66px',
                       width: 'auto',
                       display: 'block',
                       objectFit: 'contain',
@@ -58,7 +55,7 @@ export default function Footer() {
               </Link>
             </div>
             <p style={{ color: 'var(--color-gray-600)', fontSize: '0.9rem', lineHeight: 1.7, margin: '0 0 20px 0' }}>
-              Professionellt entreprenadföretag med Habo som utgångspunkt. Vi utför alla typer av entreprenad- och markarbeten med stor precision.
+              Professionellt entreprenadföretag med Jönköping som utgångspunkt. Vi utför alla typer av entreprenad- och markarbeten med stor precision.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
               {socialIcons.map(({ Icon, label, href }) => (
@@ -131,23 +128,23 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.95rem' }}>
 
               <a
-                href="mailto:mattias@mgamark.se"
+                href="mailto:ollehagmarker@icloud.com"
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Mail size={16} strokeWidth={2} />
                 </div>
-                <span>mattias@mgamark.se</span>
+                <span>ollehagmarker@icloud.com</span>
               </a>
 
               <a
-                href="tel:0761778570"
+                href="tel:0726441723"
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Phone size={16} strokeWidth={2} />
                 </div>
-                <span>076-177 85 70</span>
+                <span>072-644 17 23</span>
               </a>
 
               <div
@@ -156,7 +153,7 @@ export default function Footer() {
                 <div className="footer-contact-icon">
                   <MapPin size={16} strokeWidth={2} />
                 </div>
-                <span>Habo som utgångspunkt</span>
+                <span>Jönköping som utgångspunkt</span>
               </div>
             </div>
           </div>
@@ -178,7 +175,7 @@ export default function Footer() {
           }}
         >
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center', color: 'var(--color-gray-600)', fontSize: '0.875rem', flexWrap: 'wrap' }}>
-            <span>© 2026 - MGA Markarbeten AB</span>
+            <span>© 2026 - Hagmarkers Entreprenad AB</span>
           </div>
         </div>
       </div>

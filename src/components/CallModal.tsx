@@ -10,10 +10,10 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
 
   const contacts = [
     {
-      name: 'MGA Markarbeten AB',
-      role: 'Kundtjänst & Offert',
-      phone: '076-177 85 70',
-      tel: 'tel:0761778570',
+      name: 'Hagmarkers Entreprenad AB',
+      role: 'Kundtjänst och Offert',
+      phone: '072-644 17 23',
+      tel: 'tel:0726441723',
     },
   ];
 
@@ -103,7 +103,7 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
               fontFamily: 'var(--font-family)',
             }}
           >
-            Ring MGA Markarbeten AB
+            Ring Hagmarkers Entreprenad AB
           </h2>
           <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
             Kontakta oss direkt för rådgivning, frågor och kostnadsfri kalkyl.
