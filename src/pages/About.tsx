@@ -23,8 +23,7 @@ const teamMembers = [
   {
     role: 'Ägare och Grundare',
     name: 'Olle Hagmarker',
-    photo: 'https://i.imgur.com/TZOwaqs.png',
-    objectPosition: 'center 30%',
+    photo: '',
   },
 ];
 
@@ -264,46 +263,33 @@ export default function About() {
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   textAlign: 'center',
                 }}>
-                  {member.photo ? (
-                    <img
-                      src={member.photo}
-                      alt={member.name}
-                      loading="lazy"
-                      style={{
-                        width: '100%',
-                        height: '320px',
-                        objectFit: 'cover',
-                        objectPosition: member.objectPosition || 'center 30%',
-                        display: 'block',
-                      }}
-                    />
-                  ) : (
+                  <div style={{ padding: '32px 28px' }}>
                     <div style={{
-                      width: '100%',
-                      height: '320px',
-                      backgroundColor: '#f1f5f9',
+                      width: '64px',
+                      height: '64px',
+                      borderRadius: '50%',
+                      background: 'rgba(234, 88, 12, 0.1)',
+                      color: 'var(--color-primary)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      color: 'var(--color-primary)',
+                      fontSize: '1.8rem',
+                      fontWeight: 800,
+                      margin: '0 auto 16px auto',
                     }}>
-                      <span style={{ fontSize: '3.5rem', fontWeight: 700, fontFamily: 'var(--font-family)' }}>
-                        {member.name.charAt(0)}
-                      </span>
+                      O
                     </div>
-                  )}
-                  <div style={{ padding: '24px' }}>
                     <h3 style={{
                       color: 'var(--color-text-dark)',
                       fontWeight: 800,
-                      fontSize: '1.25rem',
+                      fontSize: '1.3rem',
                       margin: '0 0 6px 0',
                     }}>
                       {member.name}
                     </h3>
                     <p style={{
                       color: 'var(--color-primary)',
-                      fontSize: '0.92rem',
+                      fontSize: '0.95rem',
                       fontWeight: 700,
                       margin: 0,
                       lineHeight: 1.4,
